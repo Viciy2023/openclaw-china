@@ -1285,8 +1285,7 @@ function extractLocalMediaFromText(params: {
   const MARKDOWN_IMAGE_RE = /!\[([^\]]*)\]\(([^)]+)\)/g;
   const MARKDOWN_LINK_RE = /\[([^\]]*)\]\(([^)]+)\)/g;
   const BARE_LOCAL_MEDIA_PATH_RE =
-    /`?((?:\/(?:tmp|var|private|Users|home|root)\/[^\s`'",)]+|\/mnt\/[A-Za-z]\/[^\s`'",)]+|[A-Za-z]:[\\/][^\s`'",)]+)\.(?:png|jpg|jpeg|gif|bmp|webp|svg|ico|mp3|wav|ogg|m4a|amr|flac|aac|wma|mp4|mov|avi|mkv|webm|flv|wmv|m4v))`?/gi;
-
+    /(?<![A-Za-z0-9])`?((?:\/(?:tmp|var|private|Users|home|root)\/[^\s`'",)]+|\/mnt\/[A-Za-z]\/[^\s`'",)]+|[A-Za-z]:[\\/][^\s`'",)]+)\.(?:png|jpg|jpeg|gif|bmp|webp|svg|ico|mp3|wav|ogg|m4a|amr|flac|aac|wma|mp4|mov|avi|mkv|webm|flv|wmv|m4v))`?/gi;
   const collectLocalRichMedia = (
     rawValue: string,
     allowedTypes?: ReadonlySet<"image" | "audio" | "video">

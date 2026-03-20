@@ -59,4 +59,30 @@ describe("extractQQBotReplyMedia", () => {
       rmSync(dir, { recursive: true, force: true });
     }
   });
+
+  it("does not misread remote https image urls as local bare paths", () => {
+    const result = extractQQBotReplyMedia({
+      text: "![#960px #960px](https://example.com/files/image/demo.jpg)",
+      autoSendLocalPathMedia: true,
+    });
+
+    expect(result.text).toBe("![#960px #960px](https://example.com/files/image/demo.jpg)");
+    expect(result.mediaUrls).toEqual([]);
+  });
+
+  it("keeps mixed remote markdown images in text while extracting local media", () => {
+    const { dir, filePath } = createTempImageFile();
+
+    try {
+      const result = extractQQBotReplyMedia({
+        text: `封面如下\n![remote](https://example.com/files/image/demo.jpg)\n${filePath}`,
+        autoSendLocalPathMedia: true,
+      });
+
+      expect(result.text).toBe(`封面如下\n![remote](https://example.com/files/image/demo.jpg)`);
+      expect(result.mediaUrls).toEqual([filePath]);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
 });

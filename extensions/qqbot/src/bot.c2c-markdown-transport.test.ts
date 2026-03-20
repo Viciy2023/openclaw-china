@@ -422,6 +422,50 @@ describe("QQBot C2C markdown transport", () => {
     ]);
   });
 
+  it("keeps remote markdown images in c2c proactive text without queuing media", async () => {
+    installReplyRuntime([
+      {
+        text: "# 标题\n\n![remote](https://example.com/review.png)",
+      },
+    ]);
+    const logger = createLogger();
+
+    await handleQQBotDispatch({
+      eventType: "C2C_MESSAGE_CREATE",
+      eventData: {
+        id: "msg-remote-md-1",
+        event_id: "evt-remote-md-1",
+        content: "hello",
+        timestamp: 1700000000300,
+        author: {
+          user_openid: "u-remote-md-1",
+          username: "Dora",
+        },
+      },
+      cfg: {
+        channels: {
+          qqbot: {
+            ...baseCfg.channels.qqbot,
+            c2cMarkdownDeliveryMode: "proactive-all",
+          },
+        },
+      },
+      accountId: "default",
+      logger,
+    });
+
+    expect(outboundMocks.sendMedia).not.toHaveBeenCalled();
+    expect(outboundMocks.sendText).toHaveBeenCalledTimes(1);
+    expect(outboundMocks.sendText).toHaveBeenCalledWith({
+      accountId: "default",
+      cfg: { channels: { qqbot: expect.any(Object) } },
+      to: "user:u-remote-md-1",
+      text: "# 标题\n\n![#640px #480px](https://example.com/review.png)",
+      replyToId: undefined,
+      replyEventId: undefined,
+    });
+  });
+
   it("uses proactive transport for c2c markdown with local media", async () => {
     const { dir, filePath } = createTempImageFile();
     installReplyRuntime([

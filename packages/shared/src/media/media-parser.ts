@@ -382,9 +382,9 @@ function createExtractedMedia(
   sourceKind: MediaSourceKind,
   options?: MediaParseOptions
 ): ExtractedMedia {
-  const isHttp = isHttpUrl(source);
-  const isLocal = !isHttp && isLocalReference(source);
   const cleanSource = stripTitleFromUrl(source);
+  const isHttp = isHttpUrl(cleanSource);
+  const isLocal = !isHttp && isLocalReference(cleanSource);
 
   let localPath: string | undefined;
   let fileName: string | undefined;
