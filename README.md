@@ -3,8 +3,18 @@
 <p align="center">
   <strong>面向中国 IM 平台的 OpenClaw 扩展插件集合</strong>
 </p>
+
 <p align="center">
-  <a href="#快速开始">快速开始</a> •
+  <img alt="downloads" src="https://raw.githubusercontent.com/BytePioneer-AI/openclaw-china-badges/main/.github/badges/downloads-total.svg" />
+  <a href="./package.json"><img alt="license MIT" src="https://img.shields.io/badge/license-MIT-1f6feb?logo=open-source-initiative&logoColor=white" /></a>
+  <a href="https://linux.do"><img alt="LINUX DO" src="https://shorturl.at/ggSqS" /></a>
+</p>
+
+OpenClaw China 为 OpenClaw 提供面向中国常用通讯平台的渠道扩展，帮助你把 AI 助手接入钉钉、企业微信、企业微信自建应用、微信客服、微信公众号、QQ 和飞书等渠道。项目聚焦稳定的消息收发、统一的插件接入面，以及尽量低门槛的配置流程。
+
+
+<p>
+  文档目录：<a href="#快速开始">快速开始</a> •
   <a href="#总体架构">总体架构</a> •
   <a href="#功能支持">功能支持</a> •
   <a href="#更新日志">更新日志</a> •
@@ -12,14 +22,37 @@
   <a href="#-支持我们">💗 支持我们</a> •
   <a href="#加入交流群"><strong>加入交流群</strong></a>
 </p>
-<p align="center">
-  <strong>⭐ 如果这个项目对你有帮助，请给我们一个Star！⭐</strong><br>
-  <em>您的支持是我们持续改进的动力</em>
-</p>
 
-<p align="center">
-  <strong>🤖 推荐：<a href="https://github.com/BytePioneer-AI/clawmate">ClawMate</a></strong> — 为 OpenClaw 添加有温度的角色伴侣
-</p>
+
+> **⭐ 如果这个项目对你有帮助，请给我们一个 Star！⭐**
+> 
+>  您的支持是我们持续改进的动力
+>
+>  **生态项目推荐**：
+> 
+>  [ClawMate](https://github.com/BytePioneer-AI/clawmate) · 为 OpenClaw 添加一个有温度的角色伴侣。
+>
+>  [weixin-agent-gateway](https://github.com/BytePioneer-AI/weixin-agent-gateway) · 在微信中接入 **Claude Code**、Codex、OpenCode、Kimi Code CLI、Qwen Code 等
+>
+
+<table align="center">
+  <tr>
+    <td>
+      <strong>加入交流群</strong><br />
+      <sub>对 OpenClaw 用法、插件感兴趣的可以扫码加入微信群交流。</sub>
+      <ul>
+        <li><sub>安装问题可以加群询问</sub></li>
+        <li><sub>提PR时遇到开发问题加群询问</sub></li>
+        <li><sub>项目架构细节加群询问</sub></li>
+        <li><sub>插件 <strong>BUG</strong> 建议提交 <strong>issue</strong></sub></li>
+      </ul>
+      <sub><strong>欢迎同学们一起开发~</strong></sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/aec43f51-3c15-4cfc-a251-9a18c6d7fd3d" alt="交流群二维码" width="180" />
+    </td>
+  </tr>
+</table>
 <table align="center">
   <thead>
     <tr>
@@ -67,16 +100,26 @@
       <td><a href="doc/guides/wechat-mp/configuration.md">微信公众号配置指南</a></td>
     </tr>
     <tr>
-      <td>飞书（停止维护）</td>
+      <td>飞书（本仓库插件，停止维护）</td>
       <td align="center">✅ 可用</td>
       <td align="center">中等</td>
       <td>-</td>
     </tr>
-
-
-
+    <tr>
+      <td>微信（官方插件，非本仓库）</td>
+      <td align="center">✅ 可用</td>
+      <td align="center">简单</td>
+      <td><a href="https://www.runoob.com/ai-agent/openclaw-weixin.html">微信官方插件安装文档</a></td>
+    </tr>
+    <tr>
+      <td>飞书（官方插件，非本仓库）</td>
+      <td align="center">✅ 可用</td>
+      <td align="center">中等</td>
+      <td><a href="https://www.feishu.cn/content/article/7613711414611463386">飞书官方插件安装文档</a></td>
+    </tr>
   </tbody>
 </table>
+
 
 ## 谁在使用
 
@@ -87,17 +130,25 @@
 <table align="center">
   <tbody>
     <tr>
-      <td align="center" width="200">
+      <td align="center" width="180">
         <img src="./doc/images/阿里云.png" alt="阿里云" height="44"><br>
         <strong>阿里云</strong>
       </td>
-      <td align="center" width="200">
+      <td align="center" width="180">
+        <img src="./doc/images/火山引擎.png" alt="火山引擎" height="44"><br>
+        <strong>火山引擎</strong>
+      </td>
+      <td align="center" width="180">
         <img src="./doc/images/财富云.png" alt="财富云" height="44"><br>
         <strong>财富云</strong>
       </td>
-      <td align="center" width="200">
-        <img src="./doc/images/火山引擎.png" alt="火山引擎" height="44"><br>
-        <strong>火山引擎</strong>
+      <td align="center" width="180">
+        <img src="./doc/images/北少云.jpg" alt="北少云" height="44"><br>
+        <strong>北少云</strong>
+      </td>
+      <td align="center" width="180">
+        <img src="./doc/images/西安铂傲智能.png" alt="西安铂傲智能" height="44"><br>
+        <strong>西安铂傲智能</strong>
       </td>
     </tr>
   </tbody>
@@ -106,21 +157,20 @@
 > 本项目开源且可免费使用。
 >
 > 如果你的公司或团队也在使用 OpenClaw China，欢迎通过 Issue、PR、交流群或微信留下公司名称 / Logo / 使用场景，帮助我们持续维护项目，也让更多用户看到真实的落地案例。
+>
+> > 西安铂傲智能：助力西北实业公司实现智能客服、辅助拓客与低成本经营，覆盖便利店、建筑材料、地产、家居建材等业务场景。
 
 ## 功能支持
 
 更多功能在努力开发中~
 
-- **【全网首发】钉钉、QQ、企微支持文件接受和发送**
-- **【全网首发】钉钉、QQ、飞书、企微支持定时任务**
-
 **企业微信 3 个渠道 + 微信公众号怎么选**
 
-- `企业微信智能机器人（长连接）`：主要面向企业内部使用，支持企微内部私聊和群聊，不需要公网 IP，部署成本最低。不能接入微信。
+- `企业微信智能机器人（长连接）`：主要面向企业内部使用，支持企微内部私聊和群聊，不需要公网 IP，部署成本最低。不能接入微信。【企业内使用 | 推荐】
 
-- `企业微信自建应用（可接入普通微信）`：可接入普通微信，不支持群聊，需要公网 IP。
+- `企业微信自建应用（可接入普通微信）`：可接入普通微信，不支持群聊，需要公网 IP。【个人使用 | 推荐】
 
-- `微信客服（外部微信用户）`：适合让任意微信用户通过客服入口与企业的 OpenClaw 对话，不支持群聊，需要公网 IP。
+- `微信客服（外部微信用户）`：适合让任意微信用户通过客服入口与企业的 OpenClaw 对话，不支持群聊，需要公网 IP。【企业外部客户使用 | 推荐】
 
   > 按微信客服官方入口范围，理论上还可承接视频号小店、视频号主页、直播间、微信内网页、公众号菜单、小程序、搜一搜品牌官方区、支付凭证等入口，最终都是跳转到客服对话。
 
@@ -129,27 +179,56 @@
 | 功能 | 钉钉 | 飞书 | QQ | 企业微信<br />智能机器人<br />长连接 | 企业微信自建应用<br />（可接入普通微信） | 微信客服<br />（外部微信用户） | 微信公众号 |
 |------|:----:|:----:|:--:|:------------------:|:----------------:|:---------------:|:---------:|
 | 文本消息 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Markdown | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
+| Markdown | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ |
 | 流式响应 | ✅ | - | ✅ | ✅ | ❌ | ❌ | ❌ |
-| 图片/文件 | ✅  | ✅ | ✅ | ✅ | ✅ | ⚠️<br />开发中 | ⚠️<br />开发中 |
-| 语音消息 | ✅ | - | ✅ | ✅ | ✅ | ⚠️<br />开发中 | ⚠️<br />开发中 |
+| 图片/文件 | ✅  | ✅ | ✅ | ✅ | ✅ | ⚠️<br />开发中 | ⚠️仅图片 |
+| 语音消息 | ✅ | - | ✅ | ✅ | ✅ | ⚠️<br />开发中 | ✅ |
 | 私聊 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 群聊 | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
 | 多账户 | ✅ | -  | ✅ | ✅ | ✅ | ⚠️<br />开发中 | ⚠️<br />开发中 |
 | 主动发送消息<br />（定时任务） | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️<br />开发中 | ⚠️<br />开发中 |
 
-> 说明：QQ 不支持平台原生 token 级流式输出，但在私聊里配合 `replyFinalOnly=false` 与 `/verbose on` 时，assistant 过渡说明和 tool 日志会按真实生成顺序分条实时回发。
+> 说明：`qqbot` 现在支持 QQ 平台原生 `stream_messages` 流式输出，但只覆盖 `C2C` 私聊，且默认关闭，需要显式设置 `channels.qqbot.streaming=true`。群聊、频道、`replyFinalOnly=true`、结构化 Markdown 和媒体回复仍会回退到原有普通发送链路；tool / progress 文本保持普通消息实时回发。
 >
 > `qqbot` 在 QQ 私聊里处理长 Markdown 表格时，会优先缓冲连续的结构化内容，再按“完整表头 + 完整行”安全切分；续块会自动补回表头。如果上游流式把同一行拆成几段，插件也会先在本地合并后再发送，尽量避免把半截表格直接发给 QQ。
 >
 > `wecom-kf` 当前已支持外部微信用户文本会话闭环和 `enter_session` 欢迎语；多账户、文件收发、定时任务仍在开发中。
 >
-> `wechat-mp` 当前已支持文本消息收发、slash command 透传（`CommandAuthorized=true`）、被动回复闭环，以及 `activeDeliveryMode` 控制的主动发送（`split` 逐条 / `merged` 合并）；图片、语音、视频等全量媒体收发以及 OAuth / JS-SDK / 自定义菜单仍在规划中。
+> `wechat-mp` 当前已支持文本消息收发、slash command 透传（`CommandAuthorized=true`）、被动回复闭环、Markdown 降级（`renderMarkdown`），以及 `activeDeliveryMode` 控制的主动发送（`split` 逐条 / `merged` 合并），超长消息自动按字节限制智能分片；图片、语音、视频、位置、链接等全量媒体收发已完成，语音支持 ASR 自动转文字（腾讯云 Flash ASR）；OAuth / JS-SDK / 自定义菜单仍在规划中。
 
 ## 更新日志
 
 <details>
 <summary><strong>点击展开更新日志</strong></summary>
+
+### 2026-03-29
+
+- `qqbot` 新增 QQ 平台原生 C2C 流式回复支持。开启 `channels.qqbot.streaming=true` 后，AI 正文会通过 `stream_messages` 以单条消息实时更新，呈现更接近打字机的效果。
+- 流式模式继续保留可见的 tool / progress 文本；assistant 正文一旦成功进入流式会话，就不会再额外重复发送成普通文本消息。
+- 为避免破坏现有稳定性，群聊、频道、`replyFinalOnly=true`、带媒体的回复，以及命中结构化 Markdown 安全传输的 C2C 回复，仍保持原有发送策略。
+
+### 2026-03-22
+
+- `wechat-mp` 新增全量消息类型入站支持：图片、语音、视频、短视频、位置、链接消息。
+- `wechat-mp` 新增语音转文字（ASR）功能，集成腾讯云 Flash ASR 录音文件识别极速版。
+- `wechat-mp` 新增主动发送能力：模板消息、图片、语音、视频发送（自动上传媒体并发送）。
+- `wechat-mp` 新增发送能力检测：48 小时交互窗口检测、时间窗口配置、用户交互记录。
+- `wechat-mp` 新增指数退避重试机制，支持自定义重试参数。
+
+### 2026-03-21
+
+- `wecom` 智能机器人长连接 `ws` 模式修复空占位收尾文案问题。某些 OpenClaw 复杂回复路径下，渠道层可能先创建 thinking 占位气泡，但最终没有可展示内容；现在这类空占位会静默结束，不再错误显示 `✅ 处理完成。`。
+
+### 2026-03-20
+
+- `wechat-mp` 新增 Markdown 降级功能，可通过 `renderMarkdown` 配置项控制是否将 Markdown 转换为公众号友好的纯文本格式；setup 向导同步新增降级选项。
+- `wechat-mp` 新增超长消息自动分割功能，解决公众号客服消息 2048 字节限制问题：
+  - 新增 `getUtf8ByteLength` 和 `splitTextByByteLimit` 工具函数
+  - 优先在自然边界处分割：段落 `\n\n` → 分割线 `---` → 换行 `\n` → 句末标点 → 空格
+  - 确保不截断多字节字符（中文等），分割后逐条发送
+  - 新增 14 个单元测试覆盖字节计算和分割逻辑
+- `wecom` 对外状态上报现在会暴露更完整的 runtime snapshot；长连接 `ws` 模式的底层 `ready` 状态也会正确映射为 `connected`，减少状态面板和探测结果误报“未连接”的情况。
+- Merge PR #193：`dingtalk` 现在会向 Gateway 透传 `x-openclaw-message-channel` 与 `x-openclaw-session-key` 请求头，修复缺少渠道标识时被默认识别为 `webchat`、导致 Agent 看到错误渠道信息的问题。
 
 ### 2026-03-19
 
@@ -573,19 +652,32 @@ openclaw config set channels.wechat-mp.activeDeliveryMode split
 **当前已实现**
 
 - 文本消息收发（入站 + 被动回复 / 主动发送）
+- 图片、语音、视频、短视频、位置、链接消息入站
+- 语音 ASR 自动转文字（腾讯云 Flash ASR）
+- 模板消息发送
+- 图片、语音、视频主动发送
+- 重试机制（指数退避）
+- 48 小时交互窗口检测
 - 基础事件处理（关注 / 取关 / 扫码 / 菜单点击 / 菜单跳转）
 - `plain / safe / compat` 三种消息加解密模式
 - `passive / active` 两种回复模式
 - access_token 获取、缓存、自动刷新
 - 重复消息抑制（msgid 去重）
 
+**（可选）开启语音转文本（腾讯云 Flash ASR）**
+
+```bash
+openclaw config set channels.wechat-mp.asr.enabled true
+openclaw config set channels.wechat-mp.asr.appId your-tencent-app-id
+openclaw config set channels.wechat-mp.asr.secretId your-tencent-secret-id
+openclaw config set channels.wechat-mp.asr.secretKey your-tencent-secret-key
+```
+
 **开发中 / 规划中**
 
-- 图片、语音、视频等全量媒体消息收发
 - OAuth 网页授权
 - JS-SDK
 - 自定义菜单与二维码
-- 模板消息
 - 多账号交互式配置
 - 更完整的主动发送运营能力
 
@@ -605,6 +697,7 @@ openclaw config set channels.qqbot.clientSecret your-app-secret
 openclaw config set channels.qqbot.markdownSupport true
 openclaw config set channels.qqbot.c2cMarkdownDeliveryMode proactive-all
 openclaw config set channels.qqbot.c2cMarkdownChunkStrategy markdown-block
+openclaw config set channels.qqbot.streaming true
 openclaw config set channels.qqbot.typingHeartbeatMode idle
 openclaw config set channels.qqbot.typingHeartbeatIntervalMs 5000
 openclaw config set channels.qqbot.typingInputSeconds 60
@@ -653,6 +746,25 @@ openclaw config set channels.qqbot.c2cMarkdownChunkStrategy markdown-block
 - `markdown-block`：默认值。优先按标题、表格、引用、分割线、代码块、列表和正文块这些安全边界切分；`replyFinalOnly=false` 时还会先合并连续的结构化 Markdown，再把 tool/log 文本按原顺序单独发出
 - `length`：回退旧行为，继续按长度直接切分
 - 这套安全切分只作用于 `markdownSupport=true` 的 QQ 私聊/C2C Markdown；群聊、频道和普通文本发送保持原样
+
+私聊 C2C 流式回复（打字机效果）：
+
+- 开启方式：
+
+```bash
+openclaw config set channels.qqbot.streaming true
+```
+
+- 多账号场景可改为账户级配置，例如：
+
+```bash
+openclaw config set channels.qqbot.accounts.main.streaming true
+```
+
+- 这项能力只对 `C2C` 私聊生效，默认关闭
+- 开启后，AI 正文会优先走 QQ `stream_messages` 单消息实时更新；tool / progress 仍按普通消息继续回发
+- 如果回复命中结构化 Markdown 安全传输、包含媒体 URL / 本地媒体路径、或你设置了 `replyFinalOnly=true`，插件会自动继续走旧的普通发送链路
+- 如果当前 OpenClaw runtime 没有触发 `onPartialReply`，或 QQ 流式接口暂时不可用，插件会自动降级为普通消息发送，不需要额外切换配置
 
 补充说明：
 
@@ -813,6 +925,23 @@ npx github:BytePioneer-AI/clawmate
 
 了解更多：[https://github.com/BytePioneer-AI/clawmate](https://github.com/BytePioneer-AI/clawmate)
 
+### 💬 weixin-agent-gateway - 微信侧多 Agent 接入网关
+
+> 适合希望在微信中接入 Claude Code、Codex、OpenCode、Kimi Code CLI、Qwen Code 等助手的用户
+
+[weixin-agent-gateway](https://github.com/BytePioneer-AI/weixin-agent-gateway) 是一个面向微信生态的多 Agent 接入项目，可用于在微信场景下连接 Claude Code、Codex、OpenCode、Kimi Code CLI、Qwen Code 等多种 Coding / AI Agent。
+
+**适合场景**
+- 在微信里直接接入 Claude Code、Codex、OpenCode、Kimi Code CLI、Qwen Code 等助手
+- 希望统一管理多个 Agent 的微信入口
+- 需要补充微信侧的对话和使用场景
+
+**说明**
+- 这是生态推荐项目，不属于 OpenClaw China 内置渠道能力
+- 如果你需要的是 OpenClaw 接入企业微信、微信客服、微信公众号，请优先使用本仓库对应渠道
+
+了解更多：[https://github.com/BytePioneer-AI/weixin-agent-gateway](https://github.com/BytePioneer-AI/weixin-agent-gateway)
+
 </details>
 
 
@@ -962,9 +1091,7 @@ flowchart TD
 
 **欢迎同学们一起开发~**
 
-<img src="https://github.com/user-attachments/assets/db7b33fb-5e47-4fa5-ad87-5750536324bc" alt="二维码" width="50%" />
-
-<img src="https://github.com/user-attachments/assets/2f31d8ad-2c30-415a-8c30-73d5449793b1" alt="二维码" width="50%" />
+<img src="doc/images/15.jpg" alt="交流群二维码" width="50%" />
 
 
 
@@ -994,6 +1121,5 @@ flowchart TD
 ## License
 
 MIT
-
 
 
